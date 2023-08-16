@@ -1,0 +1,27 @@
+[
+  {
+    "type": "Viruses.Rabbit",
+    "object": {
+  "Name": "Giga",
+  "ReproductionSpeed": 3,
+  "DescendantsAmount": 0,
+  "Sex": 0
+}
+  },
+  {
+    "type": "Viruses.Cell",
+    "object": {
+  "ReproductionSpeed": 12,
+  "Name": "Celka",
+  "DescendantsAmount": 12
+}
+  },
+  {
+    "type": "Viruses.Hitman",
+    "object": {
+  "Name": "Killa",
+  "DidKill": true,
+  "Victim": "Gibma"
+}
+  }
+]

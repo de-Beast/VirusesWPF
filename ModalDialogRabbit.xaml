@@ -1,0 +1,21 @@
+﻿<Window	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+		xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		x:Class="Viruses.ModalDialogRabbit"
+		mc:Ignorable="d"
+		Title="Create Rabbit" MaxWidth="400" MaxHeight="190" MinWidth="400" MinHeight="190" SizeToContent="WidthAndHeight" ResizeMode="NoResize" ShowInTaskbar="False" Topmost="True" WindowStartupLocation="CenterScreen">
+	<Grid Background="White">
+		<Button Content="OK" Margin="10,116,145,10" Click="OKButton_Click" FontSize="10" Height="20" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="180"/>
+		<Button Content="Cancel" Margin="145,116,10,10" Click="CancelButton_Click" FontSize="10" Height="20" Width="180" VerticalAlignment="Bottom" HorizontalAlignment="Right"/>
+		<TextBox x:Name="ValueInput" Height="25" Margin="67,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="265" GotFocus="NameInput_GotFocus" LostFocus="NameInput_LostFocus" VerticalContentAlignment="Center" HorizontalAlignment="Left"/>
+		<Label x:Name="ValuePlaceholder" Content="Name" Margin="67,10,0,0" Foreground="#B2505050" Height="25" VerticalAlignment="Top" IsHitTestVisible="False" Padding="5,0,5,0" VerticalContentAlignment="Center" HorizontalAlignment="Left" Width="264"/>
+		<ComboBox x:Name="SexComboBox" Margin="67,40,0,0" VerticalAlignment="Top" Background="Black" SelectionChanged="SexComboBox_SelectionChanged" VerticalContentAlignment="Center" Padding="6,0,5,0" ScrollViewer.CanContentScroll="False" MinHeight="25" MinWidth="132" HorizontalAlignment="Left" Width="132" RenderTransformOrigin="0,0.5">
+			<ComboBoxItem x:Name="MaleComboBoxItem" Content="Male" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+			<ComboBoxItem x:Name="FemaleComboBoxItem" Content="Female" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+		</ComboBox>
+		<Label x:Name="SexPlaceholder" Content="Sex" Margin="67,40,201,0" Foreground="#B2505050" VerticalAlignment="Top" IsHitTestVisible="False" VerticalContentAlignment="Center" Padding="5,0,5,0" Grid.IsSharedSizeScope="True" MinWidth="132" MinHeight="25" RenderTransformOrigin="0,0.5"/>
+		<TextBox x:Name="ReproductionSpeedInput" Margin="204,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" GotFocus="ReproductionSpeedInput_GotFocus" LostFocus="ReproductionSpeedInput_LostFocus" PreviewTextInput="ReproductionSpeedInput_PreviewTextInput" FontSize="10" VerticalContentAlignment="Center" MinHeight="25" RenderTransformOrigin="1,0.5" HorizontalAlignment="Left" MinWidth="127"/>
+		<Label x:Name="ReproductionSpeedPlaceholder" Content="Reproduction speed" Margin="204,40,0,0" Foreground="#B2505050" VerticalAlignment="Top" IsHitTestVisible="False" Background="#00000000" VerticalContentAlignment="Center" Padding="5,0,5,0" Grid.IsSharedSizeScope="False" FontSize="10" MinWidth="127" MinHeight="25" RenderTransformOrigin="1,0.5" HorizontalAlignment="Left"/>
+	</Grid>
+</Window>
