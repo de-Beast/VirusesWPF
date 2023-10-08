@@ -4,7 +4,7 @@ using System.Text.Json.Serialization;
 
 namespace Viruses;
 
-public class Hitman : IForKurs, IKill
+public class Hitman : IKill, IForKurs
 {
 	public required string Name { get; init; }
 
@@ -45,6 +45,6 @@ public class Hitman : IForKurs, IKill
 
 	public List<Func<string>> GenerateDelegateList()
 	{
-		return new List<Func<string>> { Kill };
+		return new() { Kill };
 	}
 }

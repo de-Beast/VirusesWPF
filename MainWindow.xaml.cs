@@ -11,7 +11,7 @@ using System.Windows;
 /// <summary>
 /// Interaction logic for MainWindow.xaml
 /// </summary>
-public partial class MainWindow : Window
+public partial class MainWindow
 {
 	private List<IForKurs> Elements { get; } = new();
 
@@ -20,7 +20,7 @@ public partial class MainWindow : Window
 		InitializeComponent();
 	}
 
-	private static List<Func<string>> _getDelegateList(IForKurs obj)
+	private static List<Func<string>> GetDelegateList(IForKurs obj)
 	{
 		return obj.GenerateDelegateList();
 	}
@@ -122,7 +122,7 @@ public partial class MainWindow : Window
 		int index = ListBox.SelectedIndex;
 		if (index == -1) return;
 
-		var delegates = _getDelegateList(Elements[index]);
+		var delegates = GetDelegateList(Elements[index]);
 		ModalDialogMethodInvoke dialog = new(delegates);
 		if (dialog.ShowDialog() is not true) return;
 

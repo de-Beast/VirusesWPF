@@ -7,7 +7,7 @@ using System.Windows;
 /// <summary>
 /// Логика взаимодействия для ModalDialog.xaml
 /// </summary>
-public partial class ModalDialogMethodInvoke : Window
+public partial class ModalDialogMethodInvoke
 {
 	public string? Result { get; private set; }
 

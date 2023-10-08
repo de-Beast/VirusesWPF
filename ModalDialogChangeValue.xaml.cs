@@ -7,7 +7,7 @@ using System.Windows.Input;
 /// <summary>
 /// Логика взаимодействия для ModalDialog.xaml
 /// </summary>
-public partial class ModalDialogChangeValue : Window
+public partial class ModalDialogChangeValue
 {
 	public enum EType
 	{
@@ -23,7 +23,6 @@ public partial class ModalDialogChangeValue : Window
 	public ModalDialogChangeValue(EType type)
 	{
 		InitializeComponent();
-
 
 		switch (type)
 		{
@@ -63,7 +62,7 @@ public partial class ModalDialogChangeValue : Window
 
 	private void OKButton_Click2(object sender, RoutedEventArgs e)
 	{
-		if (string.IsNullOrWhiteSpace(ValueInput.Text) && int.Parse(ValueInput.Text) > 0)
+		if (string.IsNullOrWhiteSpace(ValueInput.Text) || int.Parse(ValueInput.Text) == 0)
 		{
 			MessageBox.Show(this, "Value must be greater than 0", "Missing fields", MessageBoxButton.OK, MessageBoxImage.Warning);
 			return;

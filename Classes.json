@@ -1,27 +1,29 @@
 [
   {
-    "type": "Viruses.Rabbit",
+    "type": "Viruses.Coronavirus",
     "object": {
-  "Name": "Giga",
-  "ReproductionSpeed": 3,
-  "DescendantsAmount": 0,
-  "Sex": 0
+  "ReproductionSpeed": 55,
+  "InfectedOrganisms": 0,
+  "DidKill": false,
+  "Name": "SARS-CoV-2",
+  "DescendantsAmount": 110
 }
   },
   {
-    "type": "Viruses.Cell",
+    "type": "Viruses.Rabbit",
     "object": {
-  "ReproductionSpeed": 12,
-  "Name": "Celka",
-  "DescendantsAmount": 12
+  "Name": "Garry",
+  "ReproductionSpeed": 3,
+  "DescendantsAmount": 3,
+  "Sex": 0
 }
   },
   {
     "type": "Viruses.Hitman",
     "object": {
-  "Name": "Killa",
+  "Name": "07",
   "DidKill": true,
-  "Victim": "Gibma"
+  "Victim": "Helen"
 }
   }
 ]

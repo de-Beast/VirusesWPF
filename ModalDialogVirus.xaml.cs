@@ -11,7 +11,7 @@ using System.Windows.Input;
 /// <summary>
 /// Логика взаимодействия для ModalDialog.xaml
 /// </summary>
-public partial class ModalDialogVirus : Window
+public partial class ModalDialogVirus
 {
 	public string ObjectName => ValueInput.Text;
 
@@ -38,7 +38,7 @@ public partial class ModalDialogVirus : Window
 
 	private void OKButton_Click(object sender, RoutedEventArgs e)
 	{
-		if (string.IsNullOrWhiteSpace(ValueInput.Text) || string.IsNullOrWhiteSpace(ReproductionSpeedInput.Text) && int.Parse(ReproductionSpeedInput.Text) > 0)
+		if (string.IsNullOrWhiteSpace(ValueInput.Text) || string.IsNullOrWhiteSpace(ReproductionSpeedInput.Text) || int.Parse(ReproductionSpeedInput.Text) == 0)
 		{
 			MessageBox.Show(this, "Fill missing fields first", "Missing fields", MessageBoxButton.OK, MessageBoxImage.Warning);
 			return;

@@ -9,7 +9,7 @@ using System.Windows.Input;
 /// <summary>
 /// Логика взаимодействия для ModalDialog.xaml
 /// </summary>
-public partial class ModalDialogRabbit : Window
+public partial class ModalDialogRabbit
 {
 	public string ObjectName => ValueInput.Text;
 
@@ -38,7 +38,7 @@ public partial class ModalDialogRabbit : Window
 
 	private void OKButton_Click(object sender, RoutedEventArgs e)
 	{
-		if (string.IsNullOrWhiteSpace(ValueInput.Text) || SexComboBox.SelectedIndex == -1 || string.IsNullOrWhiteSpace(ReproductionSpeedInput.Text) && int.Parse(ReproductionSpeedInput.Text) > 0)
+		if (string.IsNullOrWhiteSpace(ValueInput.Text) || SexComboBox.SelectedIndex == -1 || string.IsNullOrWhiteSpace(ReproductionSpeedInput.Text) || int.Parse(ReproductionSpeedInput.Text) == 0)
 		{
 			MessageBox.Show(this, "Fill missing fields first", "Missing fields", MessageBoxButton.OK, MessageBoxImage.Warning);
 			return;

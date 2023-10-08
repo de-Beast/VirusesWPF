@@ -37,6 +37,6 @@ public class Rabbit : IReproducible, IForKurs
 
 	public List<Func<string>> GenerateDelegateList()
 	{
-		return new List<Func<string>> { Reproduce };
+		return new() { Reproduce };
 	}
 }
